@@ -1,0 +1,27 @@
+﻿@model TipoCuenta
+
+@{
+    ViewData["Title"] = "Tipo Cuenta | Crear";
+}
+
+<h1>Crear tipo de cuenta</h1>
+<h5>Se refiere a la clasificación de las diversas cuentas financieras que registras. Estas cuentas pueden incluir cuentas corrientes, de ahorros, de inversión, tarjetas de crédito, efectivo y préstamos, entre otras.</h5>
+
+<div asp-validation-summary=All class="text-danger"></div>
+
+<form asp-action="Crear">
+    <div class="row">
+        <!-- Primera columna del frm -->
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label asp-for="nombre" class="form-label"></label>
+                <input type="text" asp-for="nombre" class="form-control"/>
+            </div>
+        <!-- Segunda columna del frm -->
+            <div class="col-md-6">
+            </div>
+        </div>
+    </div>
+    <!-- Boton submit -->
+    <button type="submit" class="btn btn-primary">Crear</button>
+</form>

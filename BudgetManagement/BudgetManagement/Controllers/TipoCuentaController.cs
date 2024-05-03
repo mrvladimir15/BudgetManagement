@@ -5,16 +5,17 @@ namespace BudgetManagement.Controllers
 {
     public class TipoCuentaController : Controller
     {
-        public IActionResult CrearCuenta()
+        public IActionResult Crear()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult CrearCuenta(TipoCuenta tipoCuenta)
+        public IActionResult Crear(TipoCuenta tipoCuenta)
         {
-            return View();
+            return ModelState.IsValid ? View() : View(tipoCuenta);
         }
     }
 
 }
+    
